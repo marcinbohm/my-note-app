@@ -1,1 +1,36 @@
+/* Navbar */
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: #1f4287;
+  height: 3rem;
+  top: 0;
+  left: 0;
+}
+
+.navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navbar_logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navigation_items ul {
+  color: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page body */
+
+#page_body {
+  padding-top: 64px;
+}
