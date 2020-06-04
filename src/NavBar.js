@@ -10,7 +10,7 @@ const NavBar = props => (
             <div>
                 <ToggleButton click={props.ToggleButtonClick} />
             </div>
-            <div><Link className="navbar_logo" to="/">myNote</Link></div>
+            <div className="navbar_logo"><Link to="/">myNote</Link></div>
         </nav>
     </header>
 );
