@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -7,21 +7,44 @@ import {
 import NavBar from './NavBar';
 import HomePage from './Home';
 import SideBar from './SideBar';
+import Backdrop from './Backdrop';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <SideBar />
-        <div id="page_body">
-          <Switch>
-            <Route path="/" component={HomePage} exact/>
-          </Switch>
+class App extends Component {
+
+  state = {
+    SideBarOpen: false
+  };
+
+  ToggleButtonClick = () => {
+    this.setState((prevState) => {
+      return {SideBarOpen: !prevState.SideBarOpen};
+    });
+  };
+
+  render() {
+    let sideBar;
+    let backdrop;
+
+    if (this.state.SideBarOpen) {
+      sideBar = <SideBar />;
+      backdrop = <Backdrop />;
+    }
+
+    return (
+      <Router>
+        <div className="App">
+          <NavBar ToggleButtonClick={this.ToggleButtonClick} />
+          {sideBar}
+          {backdrop}
+          <div id="page_body">
+            <Switch>
+              <Route path="/" component={HomePage} exact/>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
-  );
+      </Router>
+    );
+  }
 }
 
 export default App;
