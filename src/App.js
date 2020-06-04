@@ -26,11 +26,9 @@ class App extends Component {
   };
 
   render() {
-    let sideBar;
     let backdrop;
 
     if (this.state.SideBarOpen) {
-      sideBar = <SideBar />;
       backdrop = <Backdrop click={this.BackdropCloseClick} />;
     }
 
@@ -38,7 +36,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar ToggleButtonClick={this.ToggleButtonClick} />
-          {sideBar}
+          <SideBar show={this.state.SideBarOpen} />
           {backdrop}
           <div id="page_body">
             <Switch>

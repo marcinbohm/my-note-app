@@ -41,13 +41,19 @@ body {
 .sidebar {
   height: 100%;
   background: #1f6687;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   width: 70%;
   max-width: 400px;
   z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 600ms ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
 }
 
 .sidebar_items ul {
