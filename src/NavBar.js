@@ -3,11 +3,14 @@ import {Link} from 'react-router-dom';
 import 'rmwc/dist/styles';
 import { Fab } from '@rmwc/fab';
 import './index.css';
+import ToggleButton from './ToggleButton';
 
 const NavBar = () => (
     <header className="navbar">
         <nav className="navigation">
-            <div></div>
+            <div>
+                <ToggleButton />
+            </div>
             <div><Link className="navbar_logo" to="/">My Note</Link></div>
             <div className="navigation_items">
                 <ul>
