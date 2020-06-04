@@ -21,13 +21,17 @@ class App extends Component {
     });
   };
 
+  BackdropCloseClick = () => {
+    this.setState({SideBarOpen: false})
+  };
+
   render() {
     let sideBar;
     let backdrop;
 
     if (this.state.SideBarOpen) {
       sideBar = <SideBar />;
-      backdrop = <Backdrop />;
+      backdrop = <Backdrop click={this.BackdropCloseClick} />;
     }
 
     return (
