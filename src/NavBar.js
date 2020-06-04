@@ -7,7 +7,7 @@ import ToggleButton from './ToggleButton';
 const NavBar = props => (
     <header className="navbar">
         <nav className="navigation">
-            <div>
+            <div className="tb_div">
                 <ToggleButton click={props.ToggleButtonClick} />
             </div>
             <div className="navbar_logo"><Link to="/">myNote</Link></div>

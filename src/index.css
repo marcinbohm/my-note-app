@@ -28,13 +28,13 @@ body {
   height: 100%;
   width: 100%;
   align-items: center;
-  padding: 0 1rem;
 }
 
 .navbar_logo a {
   color: white;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  padding-left: 2rem;
 }
 
 /* Sidebar */
@@ -75,17 +75,27 @@ body {
 
 /* Toggle button */
 
+.tb_div {
+  height: 100%;
+  width: 80px;
+}
+
 .toggle_button {
-  display: flex;
-  height: 24px;
-  width: 30px;
+  height: 100%;
+  width: 100%;
   background: transparent;
   border: none;
   justify-content: space-around;
-  padding: 0;
-  box-sizing: border-box;
+  padding-top: 12px;
+  padding-left: 24px;
   cursor: pointer;
   flex-direction: column;
+  transition: background 400ms ease-in-out;
+}
+
+.toggle_button:hover {
+  background: #183369;
+  transition: background 400ms ease-in-out;
 }
 
 .toggle_button:focus {
@@ -93,9 +103,10 @@ body {
 }
 
 .toggle_button_line {
+  margin-top: 7px;
   width: 30px;
-  height: 2px;
-  border-radius: 10px;
+  height: 3px;
+  border-radius: 20px;
   background-color: white;
 }
 
