@@ -3,8 +3,8 @@ import './index.css';
 import { Fab } from '@rmwc/fab';
 
 const SideBar = props => (
-    <nav>
-        <div className="navigation_items">
+    <nav className="sidebar">
+        <div className="sidebar_items">
                 <ul>
                     <li>Your notes:</li>
                     <li><Fab label="Create new" /></li>
