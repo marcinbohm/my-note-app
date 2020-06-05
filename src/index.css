@@ -148,6 +148,8 @@ body {
   border-radius: 8px;
 }
 
+
+
 @media (min-width: 768px) {
   .add_note_modal {
     width: 50rem;
