@@ -90,12 +90,12 @@ body {
   padding-left: 24px;
   cursor: pointer;
   flex-direction: column;
-  transition: background 400ms ease-in-out;
+  transition: background 200ms ease-in-out;
 }
 
 .toggle_button:hover {
   background: #183369;
-  transition: background 400ms ease-in-out;
+  transition: background 200ms ease-in-out;
 }
 
 .toggle_button:focus {
@@ -115,7 +115,7 @@ body {
 .backdrop {
   position: fixed;
   height: 100%;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
   width: 100%;
@@ -131,3 +131,24 @@ body {
 .head {
   text-align: center;
 }
+
+/* !!! Modals !!! */
+
+.add_note_modal {
+  width: 90%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  z-index: 201;
+}
+
+@media (min-width: 768px) {
+  .add_note_modal {
+    width: 50rem;
+    left: calc((100% - 50rem) / 2);
+  }
+}
+
+/* !!! end of Modals !!! */

@@ -8,6 +8,7 @@ import NavBar from './NavBar';
 import HomePage from './Home';
 import SideBar from './SideBar';
 import Backdrop from './Backdrop';
+import NoteModal from './NoteModal';
 
 class App extends Component {
 
@@ -38,6 +39,9 @@ class App extends Component {
           <NavBar ToggleButtonClick={this.ToggleButtonClick} />
           <SideBar show={this.state.SideBarOpen} />
           {backdrop}
+          <React.Fragment>
+            <NoteModal />
+          </React.Fragment>
           <div id="page_body">
             <Switch>
               <Route path="/" component={HomePage} exact/>

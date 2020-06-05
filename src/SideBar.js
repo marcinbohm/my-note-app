@@ -14,7 +14,7 @@ const SideBar = props => {
             <div className="sidebar_items">
                     <ul>
                         <li>Your notes:</li>
-                        <li><Fab label="Create new" /></li>
+                        <li><Fab className="addnotebtn" label="Create new" /></li>
                     </ul>
             </div>
         </nav>
