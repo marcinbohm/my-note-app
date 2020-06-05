@@ -14,7 +14,8 @@ const SideBar = props => {
             <div className="sidebar_items">
                     <ul>
                         <li>Your notes:</li>
-                        <li><Fab onClick={props.showAddNote} label="Create new" /></li>
+                        <hr className="sidebar_hr" />
+                        <li><Fab className="sidebar_btn" onClick={props.showAddNote} label="Create new" /></li>
                     </ul>
             </div>
         </nav>
