@@ -13,14 +13,17 @@ import NoteModal from './NoteModal';
 class App extends Component {
 
   state = {
-    SideBarOpen: false
+    SideBarOpen: false,
+    NewNote: false
   };
 
   ToggleButtonClick = () => {
-    this.setState((prevState) => {
-      return {SideBarOpen: !prevState.SideBarOpen};
-    });
+    this.setState({SideBarOpen: true});
   };
+
+  createNewNote = () => {
+    this.setState({NewNote: true});
+  }
 
   BackdropCloseClick = () => {
     this.setState({SideBarOpen: false})
@@ -37,11 +40,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar ToggleButtonClick={this.ToggleButtonClick} />
-          <SideBar show={this.state.SideBarOpen} />
+          <SideBar show={this.state.SideBarOpen} showAddNote={this.state.createNewNote} />
           {backdrop}
-          <React.Fragment>
-            <NoteModal />
-          </React.Fragment>
+          {this.state.NewNote && <NoteModal />}
           <div id="page_body">
             <Switch>
               <Route path="/" component={HomePage} exact/>
