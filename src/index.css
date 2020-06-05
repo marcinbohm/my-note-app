@@ -134,6 +134,8 @@ body {
 
 /* !!! Modals !!! */
 
+/* New Note Modal */
+
 .add_note_modal {
   width: 90%;
   background: white;
@@ -142,6 +144,8 @@ body {
   top: 20vh;
   left: 5%;
   z-index: 201;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 @media (min-width: 768px) {
@@ -149,6 +153,27 @@ body {
     width: 50rem;
     left: calc((100% - 50rem) / 2);
   }
+}
+
+.add_note_header {
+  padding: 1rem;
+}
+
+.add_note_header h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.add_note_title {
+  padding: 1rem;
+}
+
+.add_note_content {
+  padding: 1rem;
+}
+
+.save_note {
+  margin: 1rem;
 }
 
 /* !!! end of Modals !!! */

@@ -4,10 +4,16 @@ import "./index.css"
 
 const noteModal = props => (
     <div className="add_note_modal">
-        <header>New note</header>
-        <section className="new_note_title"></section>
-        <section className="new_note_content"></section>
-        <Fab label="Save" />
+        <header className="add_note_header"><h2>New note</h2></header>
+        <section className="new_note_title">
+            <h3>Title</h3>
+            <textarea />
+        </section>
+        <section className="new_note_content">
+            <h3>Content</h3>
+            <textarea />
+        </section>
+        <Fab className="save_note" label="Save" />
     </div>
 );
 
