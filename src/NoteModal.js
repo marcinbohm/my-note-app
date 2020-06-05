@@ -14,6 +14,7 @@ const noteModal = props => (
             <textarea />
         </section>
         <Fab className="save_note" label="Save" />
+        <Fab onClick={props.closeNote} style={{ backgroundColor: 'var(--mdc-theme-error)'}} theme={['onError']} label="Cancel" />
     </div>
 );
 

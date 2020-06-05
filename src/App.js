@@ -22,7 +22,9 @@ class App extends Component {
   };
 
   createNewNote = () => {
-    this.setState({NewNote: true});
+    this.setState((prevState) => {
+      return {NewNote: !prevState.NewNote};
+    });
   }
 
   BackdropCloseClick = () => {
@@ -42,7 +44,7 @@ class App extends Component {
           <NavBar ToggleButtonClick={this.ToggleButtonClick} />
           <SideBar show={this.state.SideBarOpen} showAddNote={this.createNewNote} />
           {backdrop}
-          {this.state.NewNote && <NoteModal />}
+          {this.state.NewNote && <NoteModal closeNote={this.createNewNote} />}
           <div id="page_body">
             <Switch>
               <Route path="/" component={HomePage} exact/>

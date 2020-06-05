@@ -141,7 +141,7 @@ body {
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   position: fixed;
-  top: 20vh;
+  top: 10vh;
   left: 5%;
   z-index: 201;
   padding: 1rem;
@@ -152,8 +152,8 @@ body {
 
 @media (min-width: 768px) {
   .add_note_modal {
-    width: 50rem;
-    left: calc((100% - 50rem) / 2);
+    width: 70rem;
+    left: calc((100% - 70rem) / 2);
   }
 }
 
