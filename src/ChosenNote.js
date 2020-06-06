@@ -1,6 +1,7 @@
 import React from 'react';
 import notes from './CustomNotes';
 import './index.css';
+import { Fab } from '@rmwc/fab';
 
 const chosenNote = ({ match }) => {
 
@@ -13,6 +14,7 @@ const chosenNote = ({ match }) => {
                 <h2>{note.title}</h2>
                 <hr />
                 <p>{note.content}</p>
+                <Fab label="Edit" />
             </div>
         </>
     );
