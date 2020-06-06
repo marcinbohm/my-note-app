@@ -237,6 +237,10 @@ body {
   margin-top: 10px;
 }
 
+.note_sidebar:hover {
+  background: #103647;
+}
+
 .note_sidebar h3 {
   font-size: 1.2rem;
 }

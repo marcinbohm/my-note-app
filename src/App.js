@@ -9,6 +9,8 @@ import HomePage from './Home';
 import SideBar from './SideBar';
 import Backdrop from './Backdrop';
 import NoteModal from './NoteModal';
+import chosenNote from './ChosenNote';
+import NotesList from './NotesList';
 
 class App extends Component {
 
@@ -48,6 +50,7 @@ class App extends Component {
           <div id="page_body">
             <Switch>
               <Route path="/" component={HomePage} exact/>
+              <Route path="/note/:title" component={chosenNote} />
             </Switch>
           </div>
         </div>
