@@ -10,13 +10,14 @@ import SideBar from './SideBar';
 import Backdrop from './Backdrop';
 import NoteModal from './NoteModal';
 import chosenNote from './ChosenNote';
-import NotesList from './NotesList';
+import EditNoteModal from './EditNoteModal';
 
 class App extends Component {
 
   state = {
     SideBarOpen: false,
-    NewNote: false
+    NewNote: false,
+    EditNote: false
   };
 
   ToggleButtonClick = () => {
@@ -26,6 +27,12 @@ class App extends Component {
   createNewNote = () => {
     this.setState((prevState) => {
       return {NewNote: !prevState.NewNote};
+    });
+  }
+
+  editingNote = () => {
+    this.setState((prevState) => {
+      return {EditNote: !prevState.EditNote};
     });
   }
 
@@ -47,6 +54,7 @@ class App extends Component {
           <SideBar show={this.state.SideBarOpen} showAddNote={this.createNewNote} />
           {backdrop}
           {this.state.NewNote && <NoteModal closeNote={this.createNewNote} />}
+          {this.state.EditNote && <EditNoteModal closeNote={this.editingNote} />}
           <div id="page_body">
             <Switch>
               <Route path="/" component={HomePage} exact/>
