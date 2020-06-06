@@ -225,3 +225,22 @@ body {
 }
 
 /* !!! end of Modals !!! */
+
+/* Notes */
+
+.note_sidebar {
+  text-align: center;
+  text-decoration: none;
+  color: burlywood;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  margin-top: 10px;
+}
+
+.note_sidebar h3 {
+  font-size: 1.2rem;
+}
+
+.note_sidebar p {
+  font-size: 0.8rem;
+}
