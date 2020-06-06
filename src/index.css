@@ -102,6 +102,7 @@ body {
   cursor: pointer;
   flex-direction: column;
   transition: background 200ms ease-in-out;
+  border-right: 1px solid #7b818d;
 }
 
 .toggle_button:hover {
@@ -247,4 +248,24 @@ body {
 
 .note_sidebar p {
   font-size: 0.8rem;
+}
+
+.chosen_note {
+  text-align: center;
+  height: 100%;
+}
+
+.chosen_note hr {
+  width: 10%;
+  border: none;
+  height: 2px;
+  background: #1f6687;
+}
+
+.chosen_note h2 {
+  margin-top: 2rem;
+}
+
+.chosen_note p {
+  margin-top: 4rem;
 }

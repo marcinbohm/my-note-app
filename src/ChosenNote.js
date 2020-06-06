@@ -1,5 +1,6 @@
 import React from 'react';
 import notes from './CustomNotes';
+import './index.css';
 
 const chosenNote = ({ match }) => {
 
@@ -8,7 +9,11 @@ const chosenNote = ({ match }) => {
 
     return (
         <>
-            <h2>{note.title}</h2>
+            <div className="chosen_note">
+                <h2>{note.title}</h2>
+                <hr />
+                <p>{note.content}</p>
+            </div>
         </>
     );
 }
