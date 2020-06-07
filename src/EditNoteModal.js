@@ -4,7 +4,7 @@ import "./index.css"
 
 const EditNoteModal = props => (
     <div className="add_note_modal">
-        <header className="add_note_header"><h2>New note</h2></header>
+        <header className="add_note_header"><h2>Edit note</h2></header>
         <hr className="add_note_hr" />
         <section className="new_note_title">
             <h3>Title</h3>

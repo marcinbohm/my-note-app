@@ -51,7 +51,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar ToggleButtonClick={this.ToggleButtonClick} />
-          <SideBar show={this.state.SideBarOpen} showAddNote={this.createNewNote} />
+          <SideBar show={this.state.SideBarOpen} showAddNote={this.createNewNote} editChosenNote={this.editingNote} />
           {backdrop}
           {this.state.NewNote && <NoteModal closeNote={this.createNewNote} />}
           {this.state.EditNote && <EditNoteModal closeNote={this.editingNote} />}

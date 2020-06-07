@@ -17,7 +17,7 @@ const SideBar = props => {
                     <ul>
                         <li>Your notes:</li>
                         <hr className="sidebar_hr" />
-                        <NotesList notes={notes}/>
+                        <NotesList notes={notes} editclick={props.editChosenNote} />
                         <li><Fab className="sidebar_btn" onClick={props.showAddNote} label="Create new" /></li>
                     </ul>
             </div>
