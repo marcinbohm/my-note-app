@@ -8,7 +8,7 @@ const EditNoteModal = props => (
         <hr className="add_note_hr" />
         <section className="new_note_title">
             <h3>Title</h3>
-            <textarea value={props.title} />
+            <textarea>{props.title}</textarea>
         </section>
         <section className="new_note_content">
             <h3>Content</h3>

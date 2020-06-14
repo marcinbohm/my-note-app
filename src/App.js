@@ -11,6 +11,7 @@ import Backdrop from './Backdrop';
 import NoteModal from './NoteModal';
 import ChosenNote from './ChosenNote';
 import EditNoteModal from './EditNoteModal';
+import notes from './CustomNotes';
 
 class App extends Component {
 
@@ -41,27 +42,28 @@ class App extends Component {
   };
 
   render() {
+
+    const {NewNote, SideBarOpen, EditNote} = this.state;
+   
     let backdrop;
 
-    if (this.state.SideBarOpen) {
+    if (SideBarOpen) {
       backdrop = <Backdrop click={this.BackdropCloseClick} />;
     }
 
     return (
       <Router>
-        <div className="App">
           <NavBar ToggleButtonClick={this.ToggleButtonClick} />
-          <SideBar show={this.state.SideBarOpen} showAddNote={this.createNewNote} editChosenNote={this.editingNote} />
+          <SideBar show={SideBarOpen} showAddNote={this.createNewNote} editChosenNote={this.editingNote} />
           {backdrop}
-          {this.state.NewNote && <NoteModal closeNote={this.createNewNote} />}
-          {this.state.EditNote && <EditNoteModal closeNote={this.editingNote} />}
+          {NewNote && <NoteModal closeNote={this.createNewNote} />}
+          {EditNote && <EditNoteModal closeNote={this.editingNote} />}
           <div id="page_body">
             <Switch>
               <Route path="/" component={HomePage} exact/>
               <Route path="/note/:title" component={ChosenNote} />
             </Switch>
           </div>
-        </div>
       </Router>
     );
   }

@@ -18,4 +18,4 @@ const ChosenNote = ({ match }) => {
     );
 }
 
-export default ChosenNote;
+export default ChosenNote({});
